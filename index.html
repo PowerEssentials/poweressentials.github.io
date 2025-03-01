@@ -1,25 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="PowerEssentials - The ultimate plugin for PocketMine-MP servers. Enhance your server experience with many features and seamless performance.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PowerEssentials">
+    <meta property="og:description" content="The ultimate plugin for PocketMine-MP servers.">
+    
     <title>PowerEssentials</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white">
-    <nav class="bg-gray-800 p-5 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">PowerEssentials</h1>
-        <div class="space-x-6">
-            <a href="download.html" class="hover:text-blue-400">Download</a>
-            <a href="changelog.html" class="hover:text-blue-400">Changelog</a>
-            <a href="about.html" class="hover:text-blue-400">About</a>
+<body class="bg-gray-900 text-white antialiased">
+    <!-- Navigation -->
+    <nav class="bg-gray-800/95 backdrop-blur-md border-b border-gray-700 fixed w-full top-0 z-50" x-data="{ isOpen: false }">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    PowerEssentials
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="download.html" class="hover:text-blue-400 transition-colors duration-200">Download</a>
+                    <a href="changelog.html" class="hover:text-blue-400 transition-colors duration-200">Changelog</a>
+                    <a href="about.html" class="hover:text-blue-400 transition-colors duration-200">About</a>
+                </div>
+
+                <button @click="isOpen = !isOpen" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                    <svg x-show="!isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg x-show="isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="md:hidden" x-show="isOpen" @click.away="isOpen = false" x-cloak>
+            <div class="px-4 pt-2 pb-3 space-y-2">
+                <a href="download.html" class="block px-3 py-2 rounded-md hover:bg-gray-700">Download</a>
+                <a href="changelog.html" class="block px-3 py-2 rounded-md hover:bg-gray-700">Changelog</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md hover:bg-gray-700">About</a>
+            </div>
         </div>
     </nav>
-    
-    <main class="text-center mt-32">
-        <h2 class="text-5xl font-extrabold">Enhance Your Server Experience</h2>
-        <p class="mt-4 text-lg text-gray-400">The ultimate plugin for Minecraft Bedrock servers.</p>
-        <a href="download.html" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg">Get Started</a>
+
+    <main class="min-h-screen flex items-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                        Enhance Your Server
+                    </span>
+                    <span class="block mt-2">Experience</span>
+                </h2>
+                
+                <p class="text-lg md:text-xl text-gray-400 mb-8 mx-auto max-w-2xl">
+                    The ultimate plugin for PocketMine-MP servers. Optimized performance, many features, 
+                    and seamless integration.
+                </p>
+
+                <a href="download.html" 
+                   class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Get Started Now
+                </a>
+            </div>
+        </div>
     </main>
 </body>
 </html>
