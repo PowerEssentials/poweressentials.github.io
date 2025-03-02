@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#111827">
-    <meta name="description" content="Download PowerEssentials - The ultimate plugin for Minecraft Bedrock servers. Get the latest version and enhance your server experience.">
-    
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Download PowerEssentials">
-    <meta property="og:description" content="Get the latest version of PowerEssentials for your Minecraft Bedrock server.">
-    <meta property="og:image" content="https://example.com/poweressentials-download-og.jpg">
-    
     <title>Download - PowerEssentials</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.0.0/dist/cdn.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white antialiased">
     <nav class="bg-gray-800/95 backdrop-blur-md border-b border-gray-700 fixed w-full top-0 z-50" x-data="{ isOpen: false }">
@@ -24,13 +17,11 @@
                 <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                     PowerEssentials
                 </a>
-
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="hover:text-blue-400 transition-colors duration-200">Home</a>
                     <a href="changelog.html" class="hover:text-blue-400 transition-colors duration-200">Changelog</a>
                     <a href="about.html" class="hover:text-blue-400 transition-colors duration-200">About</a>
                 </div>
-
                 <button @click="isOpen = !isOpen" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
                     <svg x-show="!isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -41,7 +32,6 @@
                 </button>
             </div>
         </div>
-
         <div class="md:hidden" x-show="isOpen" @click.away="isOpen = false" x-cloak>
             <div class="px-4 pt-2 pb-3 space-y-2">
                 <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-gray-700">Home</a>
@@ -61,7 +51,6 @@
                         </span>
                         PowerEssentials
                     </h1>
-                    <p class="text-lg text-gray-400">Get the latest version and enhance your Minecraft Bedrock server</p>
                 </div>
 
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
@@ -70,12 +59,12 @@
                             <i class="fas fa-shield-alt text-blue-400 text-2xl mr-3"></i>
                             <h3 class="text-xl font-semibold">Stable Release</h3>
                         </div>
-                        <p class="text-gray-400 mb-4">Recommended for production servers</p>
-                        <a href="https://github.com/PowerEssentials/PowerEssentials/releases/latest" 
+                        <a href="https://github.com/PowerEssentials/PowerEssentials/releases/download/v1.0.0.pmmp/PowerEssentials.phar" 
                            class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-center transition-colors duration-200">
                             v1.0.0 - Download
                         </a>
                     </div>
+                </div>
 
                 <div class="grid gap-8 md:grid-cols-2">
                     <div class="bg-gray-800 rounded-xl p-6">
@@ -101,7 +90,7 @@
                             </li>
                             <li class="flex items-start">
                                 <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3">2</span>
-                                move the file to your server's plugin folder
+                                Move the file to your server's plugin folder
                             </li>
                             <li class="flex items-start">
                                 <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3">3</span>
@@ -114,7 +103,6 @@
                 <div class="mt-12 p-6 bg-gray-800 rounded-xl text-center">
                     <i class="fab fa-github text-4xl mb-4 text-gray-400"></i>
                     <h3 class="text-xl font-semibold mb-2">Open Source Project</h3>
-                    <p class="text-gray-400 mb-4">Contribute or report issues on GitHub</p>
                     <a href="https://github.com/PowerEssentials/PowerEssentials" 
                        class="inline-block bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-200">
                         <i class="fab fa-github mr-2"></i>View Repository
@@ -127,7 +115,7 @@
     <footer class="bg-gray-800/80 border-t border-gray-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
             <p class="text-gray-400">&copy; 2025 PowerEssentials. All rights reserved.</p>
-              <div class="mt-4 flex justify-center space-x-6">
+            <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://github.com/PowerEssentials" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
                     <i class="fab fa-github text-2xl"></i>
                 </a>
@@ -137,5 +125,23 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 800);
+            });
+
+            $('[title]').tooltip();
+            $('a, button').button();
+        });
+    </script>
 </body>
 </html>
